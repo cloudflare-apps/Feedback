@@ -1,0 +1,560 @@
+@font-face {
+  font-family: "eager-feedback-app-icons";
+  font-style: normal;
+  font-weight: normal;
+  src: url(data:application/x-font-woff;charset=utf-8;base64,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) format("woff")
+}
+
+.eager-feedback-app-icon:before {
+  font-family: "eager-feedback-app-icons";
+  font-style: normal;
+  font-weight: normal
+}
+
+.eager-feedback-app-icon.eager-feedback-app-icon-positive:before {
+  content: "\e600"
+}
+
+.eager-feedback-app-icon.eager-feedback-app-icon-neutral:before {
+  content: "\e602"
+}
+
+.eager-feedback-app-icon.eager-feedback-app-icon-negative:before {
+  content: "\e601"
+}
+
+@-webkit-keyframes eager-feedback-app-bounce-in-down {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(.215, .610, .355, 1);
+    animation-timing-function: cubic-bezier(.215, .610, .355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0)
+  }
+
+  60% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0)
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0)
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0)
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+  }
+}
+
+@keyframes eager-feedback-app-bounce-in-down {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(.215, .610, .355, 1);
+    animation-timing-function: cubic-bezier(.215, .610, .355, 1)
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0)
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0)
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0)
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0)
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+  }
+}
+
+@-webkit-keyframes eager-feedback-app-bounce-out-up {
+  20% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0)
+  }
+
+  40%, 45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0)
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0)
+  }
+}
+
+@keyframes eager-feedback-app-bounce-out-up {
+  20% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0)
+  }
+
+  40%, 45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0)
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0)
+  }
+}
+
+.eager-feedback-app, .eager-feedback-app-feedback-button {
+  color: #000 !important;
+  box-sizing: border-box !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+  button.eager-feedback-app-feedback-button {
+    color: #fff !important;
+    outline: none !important;
+    font-size: 1em !important;
+    background: #000;
+    border: 0 !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    position: fixed !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    height: 2em !important;
+    max-width: 20em !important;
+    padding: .5em .8em !important;
+    line-height: initial !important;
+    border-radius: .1875em .1875em 0 0 !important;
+    font-weight: bold !important;
+    cursor: pointer !important
+  }
+
+  button.eager-feedback-app-feedback-button:hover {
+    opacity: .9 !important
+  }
+
+  button.eager-feedback-app-feedback-button:hover:active {
+    opacity: .7 !important
+  }
+
+  button.eager-feedback-app-feedback-button:focus:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    border-radius: .1em;
+    box-shadow: inset 0 0 0 1px #fff;
+    pointer-events: none;
+    transition: opacity .3s ease-in-out
+  }
+
+  .eager-feedback-app-feedback-button[data-location="left-edge"],
+  .eager-feedback-app-feedback-button[data-location="right-edge"] {
+    top: 0 !important;
+    bottom: 0 !important;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+  }
+
+  .eager-feedback-app-feedback-button[data-location="left-edge"] {
+    left: 0 !important;
+    transform: rotate(90deg) translateX(-50%) translateY(-50%) !important;
+    transform-origin: 0 50% !important;
+  }
+
+  .eager-feedback-app-feedback-button[data-location="right-edge"] {
+    right: 0 !important;
+    transform: rotate(-90deg) translateX(50%) translateY(-50%) !important;
+    transform-origin: 100% 50% !important;
+  }
+
+  .eager-feedback-app-feedback-button[data-location="bottom-left-corner"],
+  .eager-feedback-app-feedback-button[data-location="bottom-right-corner"] {
+    bottom: 0 !important
+  }
+
+  .eager-feedback-app-feedback-button[data-location="bottom-left-corner"] {
+    left: 3em !important
+  }
+
+  .eager-feedback-app-feedback-button[data-location="bottom-right-corner"] {
+    right: 3em !important
+  }
+
+.eager-feedback-app * {
+  color: inherit !important
+}
+
+.eager-feedback-app:before, .eager-feedback-app:after, .eager-feedback-app *, .eager-feedback-app *:before, .eager-feedback-app *:after {
+  display: block !important;
+  box-sizing: inherit !important
+}
+
+.eager-feedback-app, .eager-feedback-app * {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  text-decoration: none !important;
+  border: 0 !important;
+  outline: none !important;
+  margin: 0 !important;
+  padding: 0 !important
+}
+
+.eager-feedback-app {
+  position: fixed;
+  z-index: 8000;
+  top: 0;
+  right: 0;
+  left: 0;
+  max-height: calc(100vh + 5.5em) !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 0 !important;
+  width: 25em;
+  max-width: 100%;
+  padding: 6.5em 1.5em 1.5em 1.5em !important;
+  margin-top: -5em !important;
+  background: #fff !important;
+  border-radius: 0 0 .3125em .3125em;
+  box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0)
+}
+
+  .eager-feedback-app::-webkit-scrollbar, .eager-feedback-app::-webkit-scrollbar-thumb {
+    height: 10px;
+    width: 10px
+  }
+
+  .eager-feedback-app::-webkit-scrollbar {
+    background: #fff !important;
+  }
+
+  .eager-feedback-app::-webkit-scrollbar-thumb {
+    border: 3px solid #fff !important;
+    border-top-width: 5.1875em !important;
+    border-bottom-width: .625em !important;
+    background: #aaa !important
+  }
+
+  @media (max-width: 30em) {
+    .eager-feedback-app {
+      width: 100%;
+      border-radius: 0
+    }
+  }
+
+  @media (max-width: 15em) {
+    .eager-feedback-app {
+      display: none
+    }
+  }
+
+  .eager-feedback-app.eager-feedback-app-show {
+    -webkit-animation: eager-feedback-app-bounce-in-down 1s ease forwards;
+    animation: eager-feedback-app-bounce-in-down 1s ease forwards
+  }
+
+  .eager-feedback-app.eager-feedback-app-hide {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-animation: eager-feedback-app-bounce-out-up 1s ease forwards;
+    animation: eager-feedback-app-bounce-out-up 1s ease forwards
+  }
+
+  .eager-feedback-app-content {
+    margin-bottom: 1em !important
+  }
+
+    .eager-feedback-app-header {
+      font-size: 1.3em !important;
+      font-weight: bold;
+      opacity: .7;
+      margin-bottom: .9em !important;
+      margin-left: 1em !important;
+      margin-right: 1em !important;
+      text-align: center !important;
+      line-height: 1em !important
+    }
+
+    .eager-feedback-app-body {
+      opacity: .7;
+      font-size: .9em !important;
+      line-height: 1.3em;
+      margin-bottom: 1em !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      text-align: center !important
+    }
+
+    .eager-feedback-app-form {
+      position: relative !important
+    }
+
+      .eager-feedback-app-form > input {
+        position: absolute;
+        top: 5em;
+        left: 3em;
+        opacity: 0
+      }
+
+    .eager-feedback-app-field-smileys {
+      font-size: 4em !important;
+      position: relative !important
+    }
+
+      @media (max-width: 24em) {
+        .eager-feedback-app-field-smileys {
+          font-size: 3em !important;
+        }
+      }
+
+      @media (max-width: 20em) {
+        .eager-feedback-app-field-smileys {
+          font-size: 2.5em !important;
+        }
+      }
+
+      @media (max-width: 16em) {
+        .eager-feedback-app-field-smileys {
+          font-size: 2em !important;
+        }
+      }
+
+      .eager-feedback-app-field-smileys > label {
+        box-sizing: border-box !important;
+        cursor: pointer !important;
+        position: relative;
+        display: inline-block !important;
+        width: 30% !important;
+        margin: 0 2.5% !important;
+        padding: .25em !important;
+        background: transparent !important;
+        border-radius: .125em !important;
+        transition: background .15s ease, box-shadow .2s ease !important;
+        box-shadow: inset 0 0 0 0 transparent !important;
+        text-align: center !important
+      }
+
+        .eager-feedback-app-field-smileys > label:before {
+          color: rgba(0, 0, 0, .3) !important;
+          transition: color .15s ease !important
+        }
+
+        .eager-feedback-app-form > input:not(:checked) + input:not(:checked) + input:not(:checked) + .eager-feedback-app-field-smileys > label[for="eager-feedback-app-negative"]:before,
+        .eager-feedback-app-form > input#eager-feedback-app-negative:checked ~ .eager-feedback-app-field-smileys > label[for="eager-feedback-app-negative"]:before {
+          color: #ea003a !important
+        }
+
+        .eager-feedback-app-form > input:not(:checked) + input:not(:checked) + input:not(:checked) + .eager-feedback-app-field-smileys > label[for="eager-feedback-app-neutral"]:before,
+        .eager-feedback-app-form > input#eager-feedback-app-neutral:checked ~ .eager-feedback-app-field-smileys > label[for="eager-feedback-app-neutral"]:before {
+          color: #ff7f50 !important
+        }
+
+        .eager-feedback-app-form > input:not(:checked) + input:not(:checked) + input:not(:checked) + .eager-feedback-app-field-smileys > label[for="eager-feedback-app-positive"]:before,
+        .eager-feedback-app-form > input#eager-feedback-app-positive:checked ~ .eager-feedback-app-field-smileys > label[for="eager-feedback-app-positive"]:before {
+          color: #1ab97a !important
+        }
+
+        .eager-feedback-app-field-smileys > label:hover {
+          background: #eee !important
+        }
+
+        .eager-feedback-app-field-smileys > label:first-of-type {
+          margin-left: 0 !important
+        }
+
+        .eager-feedback-app-field-smileys > label:last-of-type {
+          margin-right: 0 !important
+        }
+
+    .eager-feedback-app-field-feedback {
+      overflow: hidden !important;
+      max-height: 10em !important;
+      padding: .25em !important;
+      margin: -.25em !important;
+      transition: max-height .5s ease !important
+    }
+
+      .eager-feedback-app-form > input:not(:checked) + input:not(:checked) + input:not(:checked) ~ .eager-feedback-app-field-feedback {
+        max-height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important
+      }
+
+      .eager-feedback-app-field-feedback textarea {
+        margin-top: 1em !important
+      }
+
+    .eager-feedback-app-field-email {
+      overflow: hidden !important;
+      max-height: 4em !important;
+      padding: .25em !important;
+      margin: -.25em !important;
+      transition: max-height .5s ease !important
+    }
+
+      .eager-feedback-app-field-feedback > textarea:invalid ~ .eager-feedback-app-field-email {
+        max-height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important
+      }
+
+      .eager-feedback-app-field-email-input-wrapper {
+        position: relative !important
+      }
+
+      .eager-feedback-app-field-email input {
+        margin-top: .75em !important
+      }
+
+    .eager-feedback-app-input {
+      appearance: none;
+      font-family: inherit !important;
+      width: 100% !important;
+      -webkit-tap-highlight-color: transparent;
+      text-rendering: optimizeLegibility;
+      background: #fff !important;
+      color: rgba(0, 0, 0, .8) !important;
+      border: 1px solid rgba(0, 0, 0, .14) !important;
+      border-top-color: rgba(0, 0, 0, .22) !important;
+      padding: .6em .8em !important;
+      height: auto !important;
+      box-shadow: none !important;
+      line-height: initial !important;
+      border-radius: .1875em
+    }
+
+    textarea.eager-feedback-app-input {
+      resize: none !important
+    }
+
+    .eager-feedback-app-input::-webkit-input-placeholder {
+      color: rgba(0, 0, 0, .3) !important;
+      font-family: inherit;
+      font-size: 1em
+    }
+
+    .eager-feedback-app-input:-moz-placeholder {
+      color: rgba(0, 0, 0, .3) !important;
+      font-family: inherit;
+      font-size: 1em
+    }
+
+    .eager-feedback-app-input::-moz-placeholder {
+      color: rgba(0, 0, 0, .3) !important;
+      font-family: inherit;
+      font-size: 1em
+    }
+
+    .eager-feedback-app-input:-ms-input-placeholder {
+      color: rgba(0, 0, 0, .3) !important;
+      font-family: inherit;
+      font-size: 1em
+    }
+
+    button.eager-feedback-app-button {
+      position: absolute;
+      right: .25em !important;
+      top: .25em !important;
+      bottom: .25em !important;
+      margin-top: auto !important;
+      margin-bottom: auto !important;
+      max-width: 25% !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      padding-left: .75em !important;
+      padding-right: .75em !important;
+      white-space: nowrap !important;
+      line-height: initial !important;
+      color: #fff !important;
+      border-radius: .1875em;
+      font-weight: bold;
+      cursor: pointer;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      transition: opacity ease .15s 1s !important
+    }
+
+    .eager-feedback-app-input:valid + button.eager-feedback-app-button {
+      opacity: 1 !important;
+      transition: none !important;
+      pointer-events: all !important
+    }
+
+    .eager-feedback-app-input:valid + button.eager-feedback-app-button:hover {
+      opacity: .9
+    }
+
+    .eager-feedback-app-input:valid + button.eager-feedback-app-button:hover:active {
+      opacity: .7
+    }
+
+    .eager-feedback-app-input:valid + button.eager-feedback-app-button:focus:before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      left: 2px;
+      border-radius: .1em;
+      box-shadow: inset 0 0 0 1px #fff;
+      pointer-events: none;
+      transition: opacity .3s ease-in-out
+    }
+
+    .eager-feedback-app-input:valid + button.eager-feedback-app-button:focus:active:before {
+      opacity: 0
+    }
+
+  .eager-feedback-app-branding {
+    text-align: center;
+    font-size: .75em !important
+  }
+
+    a.eager-feedback-app-branding-link {
+      color: inherit !important;
+      opacity: .4
+    }
+
+      a.eager-feedback-app-branding-link:hover {
+        opacity: .8
+      }

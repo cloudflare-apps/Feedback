@@ -1,0 +1,102 @@
+{
+  "resources": {
+    "head": [
+      {
+        "type": "style",
+        "src": "eager-lead-box.css"
+      },
+      {
+        "type": "script",
+        "src": "eager-lead-box.js"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "email": {
+        "order": 1,
+        "title": "Email address to send feedback to",
+        "description": "Required. e.g. <em>your@email.com</em><br><small>Powered by <a href=\"http://formspree.io\" target=\"_blank\" class=\"with-inherited-color\"><strong>Formspree</strong></a></small>",
+        "type": "string",
+        "default": ""
+      },
+      "feedbackButtonText": {
+        "order": 2,
+        "title": "Feedback button text",
+        "type": "string",
+        "default": "Feedback"
+      },
+      "location": {
+        "order": 3,
+        "title": "Location",
+        "type": "string",
+        "format": "radios",
+        "enum": [
+          "left-edge",
+          "right-edge",
+          "bottom-left-corner",
+          "bottom-right-corner"
+        ],
+        "enumNames": {
+          "left-edge": "Left edge",
+          "right-edge": "Right edge",
+          "bottom-left-corner": "Bottom left corner",
+          "bottom-right-corner": "Bottom right corner"
+        },
+        "default": "right-edge"
+      },
+      "headerText": {
+        "order": 4,
+        "title": "Header text",
+        "type": "string",
+        "default": "Share feedback"
+      },
+      "bodyText": {
+        "order": 5,
+        "title": "Body text",
+        "type": "string",
+        "format": "textarea",
+        "default": "How do you feel about this page?"
+      },
+      "successText": {
+        "order": 6,
+        "title": "Thank you text",
+        "description": "This text will display after visitors enter their email.",
+        "type": "string",
+        "default": "Thanks for sharing that feedback! :)"
+      },
+      "color": {
+        "order": 7,
+        "title": "Accent color",
+        "type": "string",
+        "format": "color",
+        "default": "#0099ff"
+      },
+      "feedbackPlaceholders": {
+        "order": 8,
+        "title": "Feedback prompt text",
+        "type": "object",
+        "properties": {
+          "negative": {
+            "order": 1,
+            "title": "Display this prompt when the “negative” smiley is selected",
+            "type": "string",
+            "default": "Oh no! We’re so sorry. How can we help?"
+          },
+          "neutral": {
+            "order": 2,
+            "title": "Display this prompt when the “neutral” smiley is selected",
+            "type": "string",
+            "default": "Hmm, how odd. Tell us more..."
+          },
+          "positive": {
+            "order": 3,
+            "title": "Display this prompt when the “positive” smiley is selected",
+            "type": "string",
+            "default": "Woohoo, thanks! So, what went well?"
+          }
+        }
+      }
+    }
+  }
+}
