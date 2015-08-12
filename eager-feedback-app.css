@@ -164,24 +164,11 @@
   }
 
   button.eager-feedback-app-feedback-button:hover {
-    opacity: .9 !important
+    box-shadow: inset 0 0 0 999em rgba(255, 255, 255, .1) !important
   }
 
   button.eager-feedback-app-feedback-button:hover:active {
-    opacity: .7 !important
-  }
-
-  button.eager-feedback-app-feedback-button:focus:before {
-    content: "";
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    bottom: 2px;
-    left: 2px;
-    border-radius: .1em;
-    box-shadow: inset 0 0 0 1px #fff;
-    pointer-events: none;
-    transition: opacity .3s ease-in-out
+    box-shadow: inset 0 0 0 999em rgba(0, 0, 0, .2) !important
   }
 
   .eager-feedback-app-feedback-button[data-location="left-edge"],
