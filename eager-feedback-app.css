@@ -367,6 +367,7 @@
         width: 30% !important;
         margin: 0 2.5% !important;
         padding: .25em !important;
+        line-height: initial !important;
         background: transparent !important;
         border-radius: .125em !important;
         transition: background .15s ease, box-shadow .2s ease !important;
