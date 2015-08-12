@@ -18,7 +18,7 @@
         "title": "Email address to send feedback to",
         "description": "Required. e.g. <em>your@email.com</em><br><small>Powered by <a href=\"http://formspree.io\" target=\"_blank\" class=\"with-inherited-color\"><strong>Formspree</strong></a></small>",
         "type": "string",
-        "default": ""
+        "default": "your@email.com"
       },
       "feedbackButtonText": {
         "order": 2,
