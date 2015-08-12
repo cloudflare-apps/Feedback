@@ -241,10 +241,17 @@
   margin-top: -5em !important;
   background: #fff !important;
   border-radius: 0 0 .3125em .3125em;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, .2), 0 0 56px rgba(0, 0, 0, .2), 0 0 0 99999px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .2), 0 0 50px rgba(0, 0, 0, .2), 0 0 0 10000px rgba(0, 0, 0, 0) !important;
+  transition: box-shadow 1s ease !important;
   -webkit-transform: translate3d(0, -100%, 0);
   transform: translate3d(0, -100%, 0)
 }
+
+  @media only screen and (-webkit-min-device-pixel-ratio:2), only screen and (min--moz-device-pixel-ratio:2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .eager-feedback-app {
+      box-shadow: 0 0 0 .5px rgba(0, 0, 0, .2), 0 0 50px rgba(0, 0, 0, .2), 0 0 0 10000px rgba(0, 0, 0, 0) !important
+    }
+  }
 
   .eager-feedback-app::-webkit-scrollbar, .eager-feedback-app::-webkit-scrollbar-thumb {
     height: 10px;
@@ -276,15 +283,29 @@
   }
 
   .eager-feedback-app.eager-feedback-app-show {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .2), 0 0 50px rgba(0, 0, 0, .2), 0 0 0 10000px rgba(0, 0, 0, .1) !important;
     -webkit-animation: eager-feedback-app-bounce-in-down 1s ease forwards;
     animation: eager-feedback-app-bounce-in-down 1s ease forwards
   }
 
+  @media only screen and (-webkit-min-device-pixel-ratio:2), only screen and (min--moz-device-pixel-ratio:2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .eager-feedback-app.eager-feedback-app-show {
+      box-shadow: 0 0 0 .5px rgba(0, 0, 0, .2), 0 0 50px rgba(0, 0, 0, .2), 0 0 0 10000px rgba(0, 0, 0, .1) !important
+    }
+  }
+
   .eager-feedback-app.eager-feedback-app-hide {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .2), 0 0 50px rgba(0, 0, 0, .2), 0 0 0 10000px rgba(0, 0, 0, 0) !important;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     -webkit-animation: eager-feedback-app-bounce-out-up 1s ease forwards;
     animation: eager-feedback-app-bounce-out-up 1s ease forwards
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio:2), only screen and (min--moz-device-pixel-ratio:2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .eager-feedback-app.eager-feedback-app-hide {
+      box-shadow: 0 0 0 .5px rgba(0, 0, 0, .2), 0 0 50px rgba(0, 0, 0, .2), 0 0 0 10000px rgba(0, 0, 0, 0) !important
+    }
   }
 
   .eager-feedback-app-content {
