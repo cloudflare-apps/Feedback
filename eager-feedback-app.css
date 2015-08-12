@@ -247,7 +247,7 @@
   transform: translate3d(0, -100%, 0)
 }
 
-  @media only screen and (-webkit-min-device-pixel-ratio:2), only screen and (min--moz-device-pixel-ratio:2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .eager-feedback-app {
       box-shadow: 0 0 0 .5px rgba(0, 0, 0, .2), 0 0 50px rgba(0, 0, 0, .2), 0 0 0 10000px rgba(0, 0, 0, 0) !important
     }
@@ -288,7 +288,7 @@
     animation: eager-feedback-app-bounce-in-down 1s ease forwards
   }
 
-  @media only screen and (-webkit-min-device-pixel-ratio:2), only screen and (min--moz-device-pixel-ratio:2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .eager-feedback-app.eager-feedback-app-show {
       box-shadow: 0 0 0 .5px rgba(0, 0, 0, .2), 0 0 50px rgba(0, 0, 0, .2), 0 0 0 10000px rgba(0, 0, 0, .1) !important
     }
@@ -302,7 +302,7 @@
     animation: eager-feedback-app-bounce-out-up 1s ease forwards
   }
 
-  @media only screen and (-webkit-min-device-pixel-ratio:2), only screen and (min--moz-device-pixel-ratio:2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .eager-feedback-app.eager-feedback-app-hide {
       box-shadow: 0 0 0 .5px rgba(0, 0, 0, .2), 0 0 50px rgba(0, 0, 0, .2), 0 0 0 10000px rgba(0, 0, 0, 0) !important
     }
