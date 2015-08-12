@@ -3,11 +3,11 @@
     "head": [
       {
         "type": "style",
-        "src": "eager-lead-box.css"
+        "src": "eager-feedback-app.css"
       },
       {
         "type": "script",
-        "src": "eager-lead-box.js"
+        "src": "eager-feedback-app.js"
       }
     ]
   },
