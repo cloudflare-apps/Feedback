@@ -3,7 +3,7 @@
     return
   }
 
-  var options, isPreview, locationsCSSMap, style, button, el, getRadiosValue, form, show, hide, checkScroll;
+  var options, isPreview, locationsCSSMap, style, button, el, getRadiosValue, form, show, hide;
 
   options = INSTALL_OPTIONS;
 
@@ -182,21 +182,6 @@
     el.classList.add('eager-feedback-app-hide');
     el.classList.remove('eager-feedback-app-show');
   };
-
-  checkScroll = function() {
-    if (!document.body) {
-      return;
-    }
-
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-      show();
-
-      if (!isPreview) {
-        window.removeEventListener('scroll', checkScroll);
-      }
-    }
-  };
-  window.addEventListener('scroll', checkScroll);
 
   if (isPreview) {
     show();
