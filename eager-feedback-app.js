@@ -179,8 +179,10 @@
   button.addEventListener('click', show);
 
   hide = function() {
-    el.classList.add('eager-feedback-app-hide');
-    el.classList.remove('eager-feedback-app-show');
+    if (el.classList.contains('eager-feedback-app-show')) {
+      el.classList.add('eager-feedback-app-hide');
+      el.classList.remove('eager-feedback-app-show');
+    }
   };
 
   if (isPreview) {
