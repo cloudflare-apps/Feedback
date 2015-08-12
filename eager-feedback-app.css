@@ -241,7 +241,7 @@
   margin-top: -5em !important;
   background: #fff !important;
   border-radius: 0 0 .3125em .3125em;
-  box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .2), 0 0 56px rgba(0, 0, 0, .2), 0 0 0 99999px rgba(0, 0, 0, .1);
   -webkit-transform: translate3d(0, -100%, 0);
   transform: translate3d(0, -100%, 0)
 }
