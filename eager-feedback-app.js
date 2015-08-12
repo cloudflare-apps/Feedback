@@ -65,7 +65,7 @@
      '</form>' +
    '</div>' +
    '<div class="eager-feedback-app-branding">' +
-     '<a class="eager-feedback-app-branding-link" href="https://eager.io?utm_source=eager_lead_box_powered_by_link" target="_blank">Powered by Eager</a>' +
+     '<a class="eager-feedback-app-branding-link" href="https://eager.io?utm_source=eager_feedback_app_powered_by_link" target="_blank">Powered by Eager</a>' +
    '</div>' +
   '';
 
