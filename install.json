@@ -28,7 +28,7 @@
       },
       "location": {
         "order": 3,
-        "title": "Location",
+        "title": "Feedback button location",
         "type": "string",
         "format": "radios",
         "enum": [
@@ -45,57 +45,57 @@
         },
         "default": "right-edge"
       },
-      "headerText": {
-        "order": 4,
-        "title": "Header text",
-        "type": "string",
-        "default": "Share feedback"
-      },
-      "bodyText": {
-        "order": 5,
-        "title": "Body text",
-        "type": "string",
-        "format": "textarea",
-        "default": "How do you feel about this page?"
-      },
-      "successText": {
-        "order": 6,
-        "title": "Thank you text",
-        "description": "This text will display after visitors enter their email.",
-        "type": "string",
-        "default": "Thanks for sharing that feedback! :)"
-      },
       "color": {
-        "order": 7,
+        "order": 4,
         "title": "Accent color",
         "type": "string",
         "format": "color",
         "default": "#0099ff"
       },
+      "headerText": {
+        "order": 5,
+        "title": "Header text",
+        "type": "string",
+        "default": "Share feedback"
+      },
+      "bodyText": {
+        "order": 6,
+        "title": "Body text",
+        "type": "string",
+        "format": "textarea",
+        "default": "How do you feel about this page?"
+      },
       "feedbackPlaceholders": {
-        "order": 8,
+        "order": 7,
         "title": "Feedback prompt text",
         "type": "object",
         "properties": {
           "negative": {
             "order": 1,
-            "title": "Display this prompt when the “negative” smiley is selected",
+            "title": "Show this text when the “negative” smiley is selected",
             "type": "string",
             "default": "Oh no! We’re so sorry. How can we help?"
           },
           "neutral": {
             "order": 2,
-            "title": "Display this prompt when the “neutral” smiley is selected",
+            "title": "Show this text when the “neutral” smiley is selected",
             "type": "string",
             "default": "Hmm, how odd. Tell us more..."
           },
           "positive": {
             "order": 3,
-            "title": "Display this prompt when the “positive” smiley is selected",
+            "title": "Show this text when the “positive” smiley is selected",
             "type": "string",
             "default": "Woohoo, thanks! So, what went well?"
           }
         }
+      },
+      "successText": {
+        "order": 8,
+        "title": "Thank you text",
+        "description": "This text will display after visitors enter their email.",
+        "type": "string",
+        "default": "Thanks for sharing that feedback! :)"
       }
     }
   }
