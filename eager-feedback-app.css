@@ -151,6 +151,7 @@
     -webkit-appearance: none !important;
     appearance: none !important;
     position: fixed !important;
+    z-index: 8000000000005;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     white-space: nowrap !important;
@@ -225,7 +226,7 @@
 
 .eager-feedback-app {
   position: fixed;
-  z-index: 8000;
+  z-index: 8000000000006;
   top: 0;
   right: 0;
   left: 0;
