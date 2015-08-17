@@ -11,7 +11,7 @@
     return;
   }
 
-  isPreview = window.Eager && window.Eager.installs && window.Eager.installs.preview && window.Eager.installs.preview.appId === 'IgyOK_i5Ib3E';
+  isPreview = window.Eager && window.Eager.installs && window.Eager.installs.preview && window.Eager.installs.preview.appId === 'lbm-GveG9fS7';
 
   style = document.createElement('style');
   style.innerHTML = '' +
