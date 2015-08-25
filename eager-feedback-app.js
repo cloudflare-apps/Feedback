@@ -3,7 +3,7 @@
     return
   }
 
-  var options, isPreview, locationsCSSMap, style, button, el, getRadiosValue, form, show, hide;
+  var options, isPreview, locationsCSSMap, style, button, el, getRadiosValue, form, show, hide, toggle;
 
   options = INSTALL_OPTIONS;
 
@@ -179,7 +179,6 @@
     el.classList.add('eager-feedback-app-show');
     el.classList.remove('eager-feedback-app-hide');
   };
-  button.addEventListener('click', show);
 
   hide = function() {
     if (el.classList.contains('eager-feedback-app-show')) {
@@ -187,6 +186,15 @@
       el.classList.remove('eager-feedback-app-show');
     }
   };
+
+  toggle = function() {
+    if (el.classList.contains('eager-feedback-app-show')) {
+      hide();
+    } else {
+      show();
+    }
+  };
+  button.addEventListener('click', toggle);
 
   if (isPreview) {
     show();
