@@ -182,13 +182,17 @@
 
   .eager-feedback-app-feedback-button[data-location="left-edge"] {
     left: 0 !important;
+    -webkit-transform: rotate(90deg) translateX(-50%) translateY(-50%) !important;
     transform: rotate(90deg) translateX(-50%) translateY(-50%) !important;
+    -webkit-transform-origin: 0 50% !important;
     transform-origin: 0 50% !important;
   }
 
   .eager-feedback-app-feedback-button[data-location="right-edge"] {
     right: 0 !important;
+    -webkit-transform: rotate(-90deg) translateX(50%) translateY(-50%) !important;
     transform: rotate(-90deg) translateX(50%) translateY(-50%) !important;
+    -webkit-transform-origin: 100% 50% !important;
     transform-origin: 100% 50% !important;
   }
 
