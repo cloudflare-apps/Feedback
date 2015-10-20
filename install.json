@@ -11,6 +11,18 @@
       }
     ]
   },
+  "preview": {
+    "handlers": [
+      {
+        "options": ["email"],
+        "reload": false
+      },
+      {
+        "options": ["feedbackButtonText", "headerText", "bodyText", "location", "color", "feedbackPlaceholders.*", "successText"],
+        "execute": "EagerFeedbackApp.setOptions(INSTALL_OPTIONS)"
+      }
+    ]
+  },
   "options": {
     "properties": {
       "email": {

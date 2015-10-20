@@ -6,36 +6,35 @@
   var options, isPreview, locationsCSSMap, style, button, el, getRadiosValue, form, show, hide, toggle;
 
   options = INSTALL_OPTIONS;
+  isPreview = INSTALL_ID === "preview";
 
-  if (!options.email) {
+  if (!isPreview && !options.email) {
     return;
   }
 
-  isPreview = window.Eager && window.Eager.installs && window.Eager.installs.preview && window.Eager.installs.preview.appId === 'lbm-GveG9fS7';
-
   style = document.createElement('style');
-  style.innerHTML = '' +
-  ' input#eager-feedback-app-negative:checked ~ .eager-feedback-app-field-smileys > label[for="eager-feedback-app-negative"],' +
-  ' input#eager-feedback-app-neutral:checked ~ .eager-feedback-app-field-smileys > label[for="eager-feedback-app-neutral"],' +
-  ' input#eager-feedback-app-positive:checked ~ .eager-feedback-app-field-smileys > label[for="eager-feedback-app-positive"] {' +
-  '   background: transparent !impo rtant;' +
-  '   transition: box-shadow .15s ease !important;' +
-  '   box-shadow: inset 0 0 0 .06em ' + options.color + ' !important' +
-  ' }' +
-  ' .eager-feedback-app .eager-feedback-app-button, button.eager-feedback-app-feedback-button {' +
-  '   background: ' + options.color + ' !important' +
-  ' }' +
-  ' .eager-feedback-app .eager-feedback-app-input:focus {' +
-  '   border-color: ' + options.color + ' !important;' +
-  '   box-shadow: 0 0 1px ' + options.color + ' !important' +
-  ' }' +
-  '';
+  var writeColor = function(){
+    style.innerHTML = '' +
+    ' input#eager-feedback-app-negative:checked ~ .eager-feedback-app-field-smileys > label[for="eager-feedback-app-negative"],' +
+    ' input#eager-feedback-app-neutral:checked ~ .eager-feedback-app-field-smileys > label[for="eager-feedback-app-neutral"],' +
+    ' input#eager-feedback-app-positive:checked ~ .eager-feedback-app-field-smileys > label[for="eager-feedback-app-positive"] {' +
+    '   background: transparent !impo rtant;' +
+    '   transition: box-shadow .15s ease !important;' +
+    '   box-shadow: inset 0 0 0 .06em ' + options.color + ' !important' +
+    ' }' +
+    ' .eager-feedback-app .eager-feedback-app-button, button.eager-feedback-app-feedback-button {' +
+    '   background: ' + options.color + ' !important' +
+    ' }' +
+    ' .eager-feedback-app .eager-feedback-app-input:focus {' +
+    '   border-color: ' + options.color + ' !important;' +
+    '   box-shadow: 0 0 1px ' + options.color + ' !important' +
+    ' }' +
+    '';
+  }
 
   button = document.createElement('button');
   button.addEventListener('touchstart', function(){}, false); // iOS :hover CSS hack
   button.className = 'eager-feedback-app-feedback-button';
-  button.setAttribute('data-location', options.location);
-  button.innerHTML = options.feedbackButtonText;
 
   el = document.createElement('eager-feedback-app');
   el.addEventListener('touchstart', function(){}, false); // iOS :hover CSS hack
@@ -81,6 +80,34 @@
     }
   };
 
+  var updatePlaceholder = function(){
+    var radiosValue = getRadiosValue();
+    if (radiosValue && options.feedbackPlaceholders[radiosValue]) {
+      textarea.setAttribute('placeholder', options.feedbackPlaceholders[radiosValue]);
+    }
+  }
+
+  var setOptions = function (opts) {
+    options = opts;
+
+    button.innerHTML = options.feedbackButtonText;
+    button.setAttribute('data-location', options.location);
+
+    el.querySelector('.eager-feedback-app-header').innerHTML = options.headerText;
+    el.querySelector('.eager-feedback-app-body').innerHTML = options.bodyText;
+
+    writeColor();
+
+    updatePlaceholder();
+  }
+
+  setOptions(options);
+
+  window.EagerFeedbackApp = {
+    // Used by the preview
+    setOptions: setOptions
+  };
+
   (function() {
     var smileysEl, textarea, radios, firstTime, onRadiosChange;
 
@@ -90,12 +117,7 @@
     firstTime = true;
 
     onRadiosChange = function() {
-      var i, radiosValue;
-
-      radiosValue = getRadiosValue();
-      if (radiosValue && options.feedbackPlaceholders[radiosValue]) {
-        textarea.setAttribute('placeholder', options.feedbackPlaceholders[radiosValue]);
-      }
+      updatePlaceholder();
 
       setTimeout(function(){
         textarea.focus();
@@ -111,9 +133,6 @@
       radio.addEventListener('change', onRadiosChange);
     });
   })();
-
-  el.querySelector('.eager-feedback-app-header').appendChild(document.createTextNode(options.headerText));
-  el.querySelector('.eager-feedback-app-body').appendChild(document.createTextNode(options.bodyText));
 
   form = el.querySelector('.eager-feedback-app-form');
   form.action = '//formspree.io/' + options.email;
