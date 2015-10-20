@@ -3,7 +3,7 @@
     return
   }
 
-  var options, isPreview, locationsCSSMap, style, button, el, getRadiosValue, form, show, hide, toggle;
+  var options, isPreview, locationsCSSMap, style, button, el, getRadiosValue, form, show, hide, toggle, textarea, setOptions, updatePlaceholder;
 
   options = INSTALL_OPTIONS;
   isPreview = INSTALL_ID === "preview";
@@ -68,8 +68,10 @@
    '</div>' +
   '';
 
+  textarea = el.querySelector('textarea');
+
   getRadiosValue = function() {
-    var i, radios;
+    var i, radios, length;
 
     radios = el.querySelectorAll('[name="eager-feedback-app-smileys-radio"]');
 
@@ -80,14 +82,16 @@
     }
   };
 
-  var updatePlaceholder = function(){
-    var radiosValue = getRadiosValue();
+  updatePlaceholder = function() {
+    var radiosValue;
+
+    radiosValue = getRadiosValue();
     if (radiosValue && options.feedbackPlaceholders[radiosValue]) {
       textarea.setAttribute('placeholder', options.feedbackPlaceholders[radiosValue]);
     }
   }
 
-  var setOptions = function (opts) {
+  setOptions = function (opts) {
     options = opts;
 
     button.innerHTML = options.feedbackButtonText;
@@ -103,16 +107,10 @@
 
   setOptions(options);
 
-  window.EagerFeedbackApp = {
-    // Used by the preview
-    setOptions: setOptions
-  };
-
   (function() {
-    var smileysEl, textarea, radios, firstTime, onRadiosChange;
+    var smileysEl, radios, firstTime, onRadiosChange;
 
     smileysEl = el.querySelector('.eager-feedback-app-field-smileys');
-    textarea = el.querySelector('textarea');
     radios = el.querySelectorAll('[name="eager-feedback-app-smileys-radio"]');
     firstTime = true;
 
@@ -136,7 +134,7 @@
 
   form = el.querySelector('.eager-feedback-app-form');
   form.action = '//formspree.io/' + options.email;
-  form.addEventListener('submit', function(event){
+  form.addEventListener('submit', function(event) {
     event.preventDefault();
 
     var body, button, url, xhr, callback, params;
@@ -219,12 +217,12 @@
     show();
   }
 
-  document.addEventListener('DOMContentLoaded', function(){
+  document.addEventListener('DOMContentLoaded', function() {
     document.body.appendChild(style);
     document.body.appendChild(el);
     document.body.appendChild(button);
 
-    document.body.addEventListener('click', function(event){
+    document.body.addEventListener('click', function(event) {
       if (!event || !event.target) {
         return;
       }
@@ -236,4 +234,12 @@
       hide();
     });
   });
+
+  window.EagerFeedbackApp = {
+    show: show,
+    hide: hide,
+    toggle: toggle,
+    setOptions: setOptions
+  };
+
 })();
