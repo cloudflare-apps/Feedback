@@ -18,7 +18,7 @@
   ' input#eager-feedback-app-negative:checked ~ .eager-feedback-app-field-smileys > label[for="eager-feedback-app-negative"],' +
   ' input#eager-feedback-app-neutral:checked ~ .eager-feedback-app-field-smileys > label[for="eager-feedback-app-neutral"],' +
   ' input#eager-feedback-app-positive:checked ~ .eager-feedback-app-field-smileys > label[for="eager-feedback-app-positive"] {' +
-  '   background: transparent !impo rtant;' +
+  '   background: transparent !important;' +
   '   transition: box-shadow .15s ease !important;' +
   '   box-shadow: inset 0 0 0 .06em ' + options.color + ' !important' +
   ' }' +
