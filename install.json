@@ -14,11 +14,7 @@
   "preview": {
     "handlers": [
       {
-        "options": ["email"],
-        "reload": false
-      },
-      {
-        "options": ["feedbackButtonText", "headerText", "bodyText", "location", "color", "feedbackPlaceholders.*", "successText"],
+        "options": ["*"],
         "execute": "EagerFeedbackApp.setOptions(INSTALL_OPTIONS)"
       }
     ]
