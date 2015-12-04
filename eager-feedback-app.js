@@ -109,9 +109,8 @@
   setOptions(options);
 
   (function() {
-    var smileysEl, radios, firstTime, onRadiosChange;
+    var radios, firstTime, onRadiosChange;
 
-    smileysEl = el.querySelector('.eager-feedback-app-field-smileys');
     radios = el.querySelectorAll('[name="eager-feedback-app-smileys-radio"]');
     firstTime = true;
 
